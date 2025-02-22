@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Tic-Tac-Toe</h1>
+    <div id="game-board" class="game-board">
+      <!-- 9 squares for the Tic-Tac-Toe game -->
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </div>
+    <div class="scoreboard">
+      <p>X Wins: <span id="x-wins">0</span></p>
+      <p>O Wins: <span id="o-wins">0</span></p>
+    </div>
+    <button id="reset" class="reset-btn">Reset</button>
+  </div>
+
+  <div id="overlay" class="overlay">
+    <div class="message-box">
+      <p id="game-result"></p>
+      <button id="overlay-reset" class="overlay-reset-btn">Reset</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Created By GameNest</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

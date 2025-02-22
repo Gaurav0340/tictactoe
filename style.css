@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff7a18, #af002d 40%, #319197 60%, #ee7724 100%);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+  }
+  
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .container {
+    text-align: center;
+    position: relative;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .cell:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .reset-btn, .overlay-reset-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .reset-btn:hover, .overlay-reset-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .scoreboard {
+    margin-bottom: 20px;
+  }
+  
+  .scoreboard p {
+    font-size: 1.5rem;
+    margin: 5px 0;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+  
+  .message-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .message-box p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 600px) {
+    .game-board {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+    }
+  
+    .cell {
+      width: 80px;
+      height: 80px;
+      font-size: 1.5rem;
+    }
+  
+    .reset-btn, .overlay-reset-btn {
+      font-size: 1rem;
+      padding: 10px 15px;
+    }
+  }
+  
+  .footer {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 0.8rem;
+    color: white;
+  }
+  
